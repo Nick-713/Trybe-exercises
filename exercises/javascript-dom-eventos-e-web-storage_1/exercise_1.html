@@ -72,8 +72,28 @@ function squareWhite () {
     squareWhite.style.background= 'white';
   }
   squareWhite();
+  
+function correctsTitle () {
+    let title = document.getElementsByTagName('h1')[0];
+    title.innerText = 'JavaScript';
+  }
+  correctsTitle();
 
+  function uppercaseParagraph() {
+    let paragraph = document.getElementsByTagName('p')[0];
+    paragraph.innerHTML = paragraph.innerHTML.toUpperCase();
 
+  }
+  uppercaseParagraph();
+
+  function paragraphContent() {
+    let paragraphs = document.getElementsByTagName('p');
+    for(let index = 0; index < paragraphs.length; index += 1){
+      console.log(paragraphs[index].innerText);
+    }
+  }
+  paragraphContent();
+  
 
   </script>
 </body>
