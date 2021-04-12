@@ -105,11 +105,36 @@
         subtitleH3.innerHTML = 'Xablau' + index;
         container.appendChild(subtitleH3);
       }
-      console.log(container);
+      
+
+    // tarefas 2 
+    //1 
+    title.className = 'title';
+    //2 
+    let subtitle = document.querySelectorAll('h3');
+    for (let index = 0; index < 3; index += 1){
+      subtitle[index].className = 'description';
+    }
+    //3
+    let divLeft = document.querySelector('.left-content');
+    container.removeChild(divLeft);
+    //4
+    let divRight = document.querySelector('.right-content');
+    divRight.style.marginRight = 'auto';
+    //5
+    const divCenterContent = document.getElementsByClassName('center-content')[0];
+    divCenterContent.parentNode.style.backgroundColor = 'green';
+    //6
+    UnorderedList.lastChild.remove();
+    UnorderedList.lastChild.remove();
+  
+
+
+
    
 
 
   </script>
 </body>
 
-</html>
+</html>-
