@@ -1,4 +1,4 @@
-const BrazilianState = document.querySelector('#estado');
+const BrazilianState = document.querySelector('#state');
 function brazilianState (){
   let State = [
     'Acre',
@@ -37,3 +37,27 @@ function brazilianState (){
 }
 brazilianState();
 
+
+function validateData(data) {
+  if (data.indexOf('/') === 2 || data.indexOf('/') === 5) {
+    const day = data.substr(0, 2);
+    const month = data.substr(3, 2);
+    const year = data.substr(6, 4);
+    if ((day > 0 && day <= 31) && (month > 0 && month <= 12) && (year >= 0 && year.length === 4)) {
+      return true;
+    }
+  }
+  return false;
+}
+
+function checkData() {
+  const inputData = document.querySelector('#date');
+  let data = inputData.value;
+  const userData = validateData(data);
+  if (!userData && data.length) {
+    inputData.value = '';
+    alert('data invalida');
+    return false;
+  }
+  return userData;
+}

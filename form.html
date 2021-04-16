@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,42 +8,61 @@
   <title>Forms</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
   <header>
     <h1>Formulário</h1>
   </header>
   <form>
     <fieldset>
-      <label for="name"> Nome: 
-        <input type="text" name="name" id="name" placeholder="Digite seu nome" required  maxlength="40"> 
+      <label for="name"> Nome:
+        <input type="text" name="name" id="name" placeholder="Digite seu nome" required maxlength="40">
       </label>
       <br>
       <label for="email"> Email:
-        <input type="email" name="email" id="email" placeholder="Digite seu email" required  maxlength="50">
+        <input type="email" name="email" id="email" placeholder="Digite seu email" required maxlength="50">
       </label>
       <br>
       <label for="CPF"> CPF:
-        <input type="text" name="cpf" id="CPF" placeholder="Digite seu CPF" required  maxlength="11">
+        <input type="text" name="cpf" id="CPF" placeholder="Digite seu CPF" required maxlength="11">
       </label>
       <br>
-    <label for="Endereço"> Endereço:
-      <input type="text" name="Endereço" id="Endereço" placeholder="Digite seu Endereço" required  maxlength="200">
-    </label>
-    <br>
-    <label for="Cidade"> Cidade:
-      <input type="text" name="cidade" id="Cidade" placeholder="Digite sua Cidade" required  maxlength="28">
-    </label>
-   <br>
-   <label for="estado"> Estado:
-    <select name="estado" id="estado" value = ""required></select>
-   </label>
- 
-
-
-
-
+      <label for="address"> Endereço:
+        <input type="text" name="address" id="address" placeholder="Digite seu Endereço" required maxlength="200">
+      </label>
+      <br>
+      <label for="City"> Cidade:
+        <input type="text" name="City" id="City" placeholder="Digite sua Cidade" required maxlength="28">
+      </label>
+      <br>
+      <label for="state"> Estado:
+        <select name="state" id="state" value="" required></select>
+      </label>
+      <br>
+      <label for="immobile">Tipo de imóvel:</label>
+      <input type="radio" name="immobile" id="casa" value="house" required> Casa
+      <input type="radio" name="immobile" id="apartment" value="apartment" required> Apartamento
+    </fieldset>
+    
+    <fieldset>
+      <label for="curriculum"> Resumo do seu currículo:
+        <textarea name="curriculum" id="curriculum" cols="30" rows="10" maxlength="1000" required>
+        </textarea>
+      </label>
+      <br>
+      <label for="office"> Cargo:
+        <input type="text" name="office" id="office" maxlength="40" required>
+      </label>
+      <Label for="description"> descrição de Cargo:
+        <input type="text" name="description" id="description" maxlength="500" required>
+      </Label>
+      <br>
+      <label for="date"> Data de Início:
+        <input type="text" id="date" name="date" value=""  placeholder="dd/mm/aaaa" required>
+      </label>
     </fieldset>
   </form>
   <script src="script.js"></script>
 </body>
+
 </html>
