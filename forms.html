@@ -1,0 +1,107 @@
+<!--index.html-->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario-curriculo</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+  <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <header class="form-header">
+    <h1 class="title">Formulário para cadastro de currículo</h1>
+    <p class="subtitle">Preencha os campos abaixo.</p>
+  </header>
+  <form id="cv-form">
+    <div class="form-row">
+      <div>
+        <div class="field">
+          <label for="name" class="label">Nome: </label>
+          <div class="control">
+            <input type="text" name="name" id="name" maxlength="40" required>
+          </div>
+        </div>
+        <div class="field">
+          <label class="label" for="email">Endereço de e-mail: </label>
+          <div class="control">
+            <input class="email-input" type="email" name="email" id="email" maxlength="50" required>
+          </div>
+        </div>
+        <div class="field">
+          <label class="label" for="cpf-number">CPF: </label>
+          <div class="control">
+            <input type="text" name="cpf" id="cpf-number" maxlength="11" required>
+          </div>
+        </div>
+        <div class="field">
+          <label class="label" for="address">Endereço: </label>
+          <div class="control">
+            <input type="text" name="address" id="address" maxlength="200" required>
+          </div>
+        </div>
+        <div class="field">
+          <label class="label" for="city">Cidade: </label>
+          <div class="control">
+            <input type="text" name="city" id="city" maxlength="200" required>
+          </div>
+        </div>
+        <div class="field">
+          <label class="label" for="state">Estado: </label>
+          <div class="control">
+          <div class="select">
+            <select name="state" id="state" value="" required>
+            </select>
+        </div>
+        <div class="field">
+          <div class="control">
+            <label class="label" for="house-apartament">Tipo do Imóvel:</label>
+              <label class="radio" for="house-apartment">
+                <input type="radio" name="house-apartment" id="house" value="house" required> 
+                Casa:
+              </label>
+              <label class="radio" for="house-apartment">
+                <input type="radio" name="house-apartment" id="apartment" value="apartment" required>
+                Apartamento:
+          </div>
+          
+      </div>
+      <div>
+        <div class="field">
+          <label class="label" for="cv-resume">Resumo do currículo: </label>
+          <div class="control">
+            <textarea id="cv-resume" name="cv-resume" maxlength="1000" cols="100" rows="20" required></textarea>
+          </div>
+
+        </div>
+        <div class="field">
+          <label class="label" for="position">Cargo: </label>
+          <div class="control">
+            <input type="text" name="position" id="position" maxlength="40" required>
+          </div>
+        </div>
+        <div class="field">
+          <label class="label" for="description">Descrição do cargo: </label>
+          <div class="control">
+            <input type="text" id="description" name="description" required>
+          </div>
+        </div>
+        <div class="field">
+          <label class="label" for="start-date">Data de início: </label>
+          <div class="control">
+            <input type="text" class="input-data" name="start-date" value="" required>
+          </div>
+
+        </div>
+      </div>
+      <button class="submit-button button is-dark" type="button">Enviar</button>
+      <button class="clear-button button is-danger" type="button">Limpar</button>
+    </div>
+  </form>
+  <section class="form-data"></section>
+  <script src="script.js"></script>
+</body>
+
+</html>

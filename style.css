@@ -1,0 +1,26 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css";
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body{
+  color: rgb(93, 96, 99);
+  font-family: 'Helvetica', 'Arial', 'Sans-serif';
+}
+.form-header{
+  text-align: center;
+  background-color: rgb(246, 247, 248);
+  border: 1px solid rgb(214, 217, 220);
+  border-radius: 3px;
+  width: 80%;
+  margin: 40px 0;
+  padding: 50px;
+  margin-right: auto;
+  margin-left: auto;
+}
+#cv-form {
+  max-width: 80%;
+  margin-left: 20px;
+}
