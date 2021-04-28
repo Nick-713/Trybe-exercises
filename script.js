@@ -41,7 +41,6 @@ const customerInfo = (order) => {
 console.log(customerInfo(order));
 
 const orderModifier = (order) => {
-  // quero de retorno  "Olá Luiz Silva, o total do seu pedido de muzzarella,calabresa e Coca-Cola Zero é R$ 50,00."
   const newClient = (order.name = "Luiz Silva");
   const newValueForPizza = (order.payment.total = "50");
   const pizzas = Object.keys(order.order.pizza);
@@ -51,5 +50,69 @@ const orderModifier = (order) => {
 
 console.log(orderModifier(order));
 
-console.log("Objeto completo");
-console.log(order);
+// Parte 2
+const lesson1 = {
+  materia: "Matemática",
+  numeroEstudantes: 20,
+  professor: "Maria Clara",
+  turno: "manhã",
+};
+
+const lesson2 = {
+  materia: "História",
+  numeroEstudantes: 20,
+  professor: "Carlos",
+};
+const lesson3 = {
+  materia: "Matemática",
+  numeroEstudantes: 10,
+  professor: "Maria Clara",
+  turno: "noite",
+};
+
+const addNewproperty = (object, key, value) => {
+  object[key] = value;
+};
+//1
+console.log(addNewproperty(lesson2, "turno", "manhã"));
+console.log(lesson2);
+//2
+const listTheKeys = (object) => {
+  const list = Object.keys(object);
+  return `Chaves do objeto: ${list}`;
+};
+
+console.log(listTheKeys(lesson3));
+
+//3
+const objectSize = (object) => {
+  console.log(Object.keys(object).length);
+};
+objectSize(lesson3);
+
+//4
+const listTheValues = (object) => {
+  console.log(Object.values(object));
+};
+listTheValues(lesson3);
+//5
+const allLessons = Object.assign({}, { lesson1, lesson2, lesson3 });
+console.log(allLessons);
+//6
+// soma o número total de estudantes
+const studentTotal = (lessons) => {
+  const keys = Object.keys(lessons);
+  let total = 0;
+  for (let index = 0; index < keys.length; index += 1) {
+    const currentKey = keys[index];
+    total += lessons[currentKey].numeroEstudantes;
+  }
+  return total;
+};
+console.log(studentTotal(allLessons));
+//7
+const valuePosition = (object, number) => {
+  const position = Object.values(object)[number];
+  return position;
+};
+console.log(valuePosition(lesson3, 0));
