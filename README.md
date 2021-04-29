@@ -1,2 +1,1 @@
-# Trybe-exercises
-BLOCK EXERCISES
+# Testes unitários em JavaScript
