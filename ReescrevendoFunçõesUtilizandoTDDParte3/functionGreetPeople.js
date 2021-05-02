@@ -1,3 +1,5 @@
+const assert = require("assert");
+
 const greetPeople = (people) => {
   const greeting = [];
   for (const person in people) {
@@ -6,11 +8,9 @@ const greetPeople = (people) => {
   return greeting;
 };
 
-const assert = require("assert");
-assert.strictEqual(typeof greetPeople, "function");
-
 const parameter = ["Irina", "Ashleigh", "Elsa"];
 const result = ["Hello Irina", "Hello Ashleigh", "Hello Elsa"];
-
 const output = greetPeople(parameter);
+
+assert.strictEqual(typeof greetPeople, "function");
 assert.deepStrictEqual(output, result);
