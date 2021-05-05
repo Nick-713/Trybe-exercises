@@ -18,3 +18,15 @@ const newEmployees = (hiredPerson) => {
 };
 
 console.log(newEmployees(hiredPerson));
+
+const numberCheck = (myNumber, number) => myNumber === number;
+
+const numberdraw = (myNumber, callback) => {
+  const number = Math.floor(Math.random() * 5);
+
+  return callback(myNumber, number)
+    ? 'Parabéns você ganhou'
+    : 'Tente Novamente';
+};
+
+console.log(numberdraw(5, numberCheck));
